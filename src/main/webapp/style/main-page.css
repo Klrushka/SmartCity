@@ -1,0 +1,205 @@
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Nanum Gothic', sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    margin: 0;
+}
+
+
+.header-menu ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+
+.header-menu ul li {
+    display: inline-flex;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.header-menu ul li:first-child {
+    display: inline-flex;
+    padding: 30px;
+    font-size: 20px;
+    margin-right: auto;
+}
+
+.header-menu ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+.welcome-block {
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.welcome-block img {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}
+
+.welcome-block section {
+    margin-left: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 65px;
+
+}
+
+
+.about-block {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    background-color: gray;
+}
+
+
+.about-block p {
+    margin-left: 150px;
+    display: flex;
+    justify-content: center;
+    font-size: 65px;
+    float: left;
+}
+
+.welcome-text {
+    background-color: rgba(255, 255, 255, 0.41);
+    width: 100%;
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    text-align: center;
+    font-size: 50px;
+    padding: 20px;
+
+    right: 0;
+}
+
+.about-block a {
+    margin-left: 200px;
+    display: flex;
+    font-size: 30px;
+    float: left;
+}
+
+.about-text {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-pic {
+    width: 50%;
+    display: flex;
+}
+
+.about-pic img {
+    width: 60%;
+    padding-left: 300px;
+}
+
+
+.label-scroll-bar {
+    display: flex;
+    margin-top: 55px;
+    justify-content: center;
+    font-size: 65px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    margin: 50px 200px 200px 200px;
+    justify-content: space-between;
+    overflow: scroll;
+
+}
+
+.menu-block {
+    width: 100%;
+    height: 100%;
+    margin: 20px;
+}
+
+.block {
+
+    width: 450px;
+    height: 450px;
+}
+
+
+.block p {
+    opacity: 0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+
+.block p:hover {
+    opacity: 1;
+    visibility: visible;
+    transition: 1s;
+}
+
+.block:hover {
+    background-image: none;
+    background-color: black;
+    transition: 1s;
+    color: azure;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+}
+
+
+.hotel {
+    background-image: url("../img/hotel.jpg");
+}
+
+
+.house {
+    background-image: url("../img/house.jpg");
+}
+
+
+.park {
+    background-image: url("../img/park.jpg");
+}
+
+.shop{
+    background-image: url("../img/shop.jpg");
+}
+
+.columns {
+    column-count: 4;
+    margin: 60px 100px 40px 150px;
+    column-rule: black solid 3px;
+    font-size: 25px;
+}
+
+.footer {
+    display: flex;
+    background-color: black;
+    height: 200px;
+}
+

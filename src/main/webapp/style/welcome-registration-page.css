@@ -1,0 +1,90 @@
+html {
+    background: url("../img/start-back.jpg") no-repeat center top fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: Roboto, serif;
+
+}
+
+.sign-up {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(103, 105, 107, 0.66);
+    width: 33%;
+    height: 100%;
+    margin-left: auto;
+    top: 0;
+    right: 0;
+    padding-top: 20px;
+    align-items: center;
+    flex-direction: column
+
+}
+
+.star-text {
+    position: fixed;
+    display: flex;
+    color: azure;
+    font-size: 150px;
+    justify-content: space-around;
+    align-content: center;
+    width: 67%;
+    height: 100%;
+    align-items: center;
+}
+
+
+.sign-up-input-form input {
+    display: flex;
+    width: 300px;
+    resize: vertical;
+    border-radius: 15px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    height: 40px;
+    margin: 10px;
+    align-content: space-around;
+}
+
+
+.start-submit-button {
+    display: flex;
+    margin: 10px;
+    align-content: space-around;
+
+}
+
+.start-submit-button input{
+    width: 300px;
+    resize: vertical;
+    border-radius: 15px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    height: 40px;
+}
+
+.start-submit-button input:hover{
+    color: white;
+    background-color:black;
+}
+
+
+.star-text-registration{
+    display: flex;
+    margin: 10px;
+    align-content: space-around;
+    color: azure;
+    font-size: 50px;
+}
+
+.login-text{
+    display: flex;
+    margin: 10px;
+    align-content: space-around;
+    color: azure;
+    font-size: 14px;
+    text-decoration: none;
+}
