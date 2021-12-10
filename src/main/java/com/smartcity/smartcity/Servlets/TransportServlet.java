@@ -1,7 +1,7 @@
 package com.smartcity.smartcity.Servlets;
 
 import com.smartcity.smartcity.Models.House;
-import com.smartcity.smartcity.Models.Park;
+import com.smartcity.smartcity.Models.Transport;
 import com.smartcity.smartcity.Models.User;
 import com.smartcity.smartcity.dbhandler.Tables;
 import com.smartcity.smartcity.requests.RequestExecutorImp;
@@ -16,8 +16,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-@WebServlet(name = "ParksServlet", value = "/ParksServlet")
-public class ParksServlet extends HttpServlet {
+@WebServlet(name = "TransportServlet", value = "/TransportServlet")
+public class TransportServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
@@ -28,22 +28,22 @@ public class ParksServlet extends HttpServlet {
 
         AllSelectRequest selectRequest = new AllSelectRequest();
 
-        ResultSet resultSet = executor.executeResultSet(selectRequest.getRequest(Tables.PARKS.getValue()));
+        ResultSet resultSet = executor.executeResultSet(selectRequest.getRequest(Tables.TRANSPORT.getValue()));
 
-        ArrayList<Park> parks = new ArrayList<>();
+        ArrayList<Transport> transports = new ArrayList<>();
 
         try {
             while (resultSet.next()) {
 
-                Park park = new Park(
+                Transport transport = new Transport(
                         resultSet.getInt("id"),
-                        resultSet.getString("address"),
-                        resultSet.getInt("rating"),
+                        resultSet.getString("type"),
+                        resultSet.getInt("number"),
+                        resultSet.getString("root_name"),
                         resultSet.getInt("about_id")
                 );
 
-
-                parks.add(park);
+                transports.add(transport);
 
             }
         } catch (SQLException e) {
@@ -51,13 +51,13 @@ public class ParksServlet extends HttpServlet {
         }
 
 
-        request.setAttribute("parks",parks);
+        request.setAttribute("transports",transports);
 
         if (user.getAccess().equals("admin")){
             //TODO ADMin PAGE
-            getServletContext().getRequestDispatcher("/parks.jsp").forward(request,response);
+            getServletContext().getRequestDispatcher("/transport.jsp").forward(request,response);
         } else {
-            getServletContext().getRequestDispatcher("/parks.jsp").forward(request,response);
+            getServletContext().getRequestDispatcher("/transport.jsp").forward(request,response);
 
         }
     }

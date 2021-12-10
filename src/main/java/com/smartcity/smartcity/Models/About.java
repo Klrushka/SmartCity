@@ -5,12 +5,11 @@ import com.smartcity.smartcity.Models.interfaces.Model;
 public class About implements Model {
     private int id;
     private String text;
-    private int topicId;
 
-    public About(int id, String text, int topicId) {
+
+    public About(int id, String text) {
         this.id = id;
         this.text = text;
-        this.topicId = topicId;
     }
 
     public About() {
@@ -32,11 +31,4 @@ public class About implements Model {
         this.text = text;
     }
 
-    public int getTopicId() {
-        return topicId;
-    }
-
-    public void setTopicId(int topicId) {
-        this.topicId = topicId;
-    }
 }

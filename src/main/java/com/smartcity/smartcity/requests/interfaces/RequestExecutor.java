@@ -7,4 +7,5 @@ import java.sql.ResultSet;
 public interface RequestExecutor {
     void execute(String request);
     ResultSet executeResultSet(String request);
+    void addData(Model model);
 }

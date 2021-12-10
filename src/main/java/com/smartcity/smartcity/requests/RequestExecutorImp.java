@@ -1,7 +1,10 @@
 package com.smartcity.smartcity.requests;
 
+import com.smartcity.smartcity.Models.*;
 import com.smartcity.smartcity.Models.interfaces.Model;
 import com.smartcity.smartcity.dbhandler.DBConnection;
+import com.smartcity.smartcity.requests.insert.AboutInsertRequest;
+import com.smartcity.smartcity.requests.insert.HouseInsertRequest;
 import com.smartcity.smartcity.requests.interfaces.RequestExecutor;
 
 import java.sql.Connection;
@@ -28,7 +31,7 @@ public class RequestExecutorImp implements RequestExecutor {
 
     @Override
     public ResultSet executeResultSet(String request) {
-        
+
         Connection connection = DBConnection.getConnection();
 
         ResultSet resultSet = null;
@@ -36,7 +39,7 @@ public class RequestExecutorImp implements RequestExecutor {
         try {
             PreparedStatement statement = connection.prepareStatement(request);
 
-             resultSet = statement.executeQuery();
+            resultSet = statement.executeQuery();
 
 
         } catch (SQLException e) {
@@ -47,6 +50,25 @@ public class RequestExecutorImp implements RequestExecutor {
 
     }
 
+    @Override
+    public void addData(Model model) {
+
+        if (model instanceof House) {
+            HouseInsertRequest.execute((House) model);
+        } else if (model instanceof Hotel) {
+
+        } else if (model instanceof ATM) {
+
+        } else if (model instanceof Park) {
+
+        } else if (model instanceof Shop) {
+
+        } else if (model instanceof Transport) {
+
+        } else if (model instanceof About){
+            AboutInsertRequest.execute((About) model);
+        }
+    }
 
 
 }

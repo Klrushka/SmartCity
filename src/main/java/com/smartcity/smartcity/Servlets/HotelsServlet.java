@@ -39,7 +39,8 @@ public class HotelsServlet extends HttpServlet {
                             resultSet.getInt("id"),
                             resultSet.getString("name"),
                             resultSet.getInt("rating"),
-                            resultSet.getString("address")
+                            resultSet.getString("address"),
+                            resultSet.getInt("about_id")
                     );
 
                     hotels.add(hotel);

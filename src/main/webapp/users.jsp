@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: User
-  Date: 04.12.2021
-  Time: 13:03
+  Date: 05.12.2021
+  Time: 17:26
   To change this template use File | Settings | File Templates.
 --%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
@@ -34,7 +34,7 @@
 
     <div class="page-label">
         <p>
-            HOUSES
+            Users
         </p>
 
     </div>
@@ -47,10 +47,11 @@
             <table cellpadding="0" cellspacing="0" border="0">
                 <thead>
                 <tr>
-                    <th>Address</th>
-                    <th>Flats</th>
-                    <th>Floors</th>
-                    <th>Rating</th>
+                    <th>Name</th>
+                    <th>Phone</th>
+                    <th>Mail</th>
+                    <th>Status</th>
+                    <th>Access</th>
                 </tr>
                 </thead>
             </table>
@@ -58,12 +59,13 @@
         <div class="tbl-content">
             <table cellpadding="0" cellspacing="0" border="0">
                 <tbody>
-                <c:forEach var="house" items="${houses}">
-                    <tr onclick="document.location = 'http://localhost:8080/SmartCity_war_exploded/AboutServlet?topicId=${house.id}'">
-                        <td><a>${house.address}</a></td>
-                        <td><a>${house.flats}</a></td>
-                        <td><a>${house.floors}/5</a></td>
-                        <td><a>${house.rating}/5</a></td>
+                <c:forEach var="user" items="${users}">
+                    <tr>
+                        <td><a>${user.name}</a></td>
+                        <td><a>${user.phone}</a></td>
+                        <td><a>${user.mail}</a></td>
+                        <td><a>${user.status}</a></td>
+                        <td><a>${user.access}</a></td>
                     </tr>
                 </c:forEach>
                 </tbody>

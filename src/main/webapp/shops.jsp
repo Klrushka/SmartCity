@@ -62,7 +62,7 @@
                     <tr>
                         <td><a>${shop.name}</a></td>
                         <td><a>${shop.type}</a></td>
-                        <td><a>${shop.assress}</a></td>
+                        <td><a>${shop.address}</a></td>
                         <td><a>${shop.rating}/5</a></td>
                     </tr>
                 </c:forEach>

@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: User
-  Date: 02.12.2021
-  Time: 19:36
+  Date: 08.12.2021
+  Time: 17:28
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -21,6 +21,18 @@
 <header class="header-menu">
     <ul>
         <li>SMART CITY</li>
+        <li><a>Users</a></li>
+        <li><div class="dropdown">
+            <button class="dropbtn">Add data</button>
+            <div class="dropdown-content">
+                <a href="#">Atm</a>
+                <a href="#">Hotels</a>
+                <a href="AddHouseServlet">Houses</a>
+                <a href="#">Parks</a>
+                <a href="#">Shops</a>
+                <a href="#">Transport</a>
+            </div>
+        </div></li>
         <li><a href="#about">About</a></li>
         <li><a href="#">Creator</a></li>
         <li><a href="#">Account</a></li>

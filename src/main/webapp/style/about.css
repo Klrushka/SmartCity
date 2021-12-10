@@ -1,0 +1,136 @@
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: 'Nanum Gothic', sans-serif;
+    scroll-behavior: smooth;
+
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+
+.header-menu ul {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+}
+
+
+.header-menu ul li {
+    display: inline-flex;
+    padding: 30px;
+    font-size: 20px;
+}
+
+.header-menu ul li:first-child {
+    display: inline-flex;
+    padding: 30px;
+    font-size: 20px;
+    margin-right: auto;
+}
+
+.header-menu ul li a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.about-img {
+    display: flex;
+    width: 50%;
+    margin-right: 50px;
+    height: 20%;
+}
+
+.about-img img {
+    height: 50%;
+}
+
+.about-text {
+    width: 50%;
+}
+
+.about-block {
+    display: flex;
+    margin: 120px;
+
+}
+
+.about-text {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+
+.page-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    font-size: 60px;
+}
+
+.comment {
+    border: black 2px solid;
+    margin: 10px;
+    padding: 5px;
+}
+
+.comments p {
+    margin: 20px;
+}
+
+.input-com {
+    display: flex;
+    margin: 20px;
+}
+
+.com-t{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.input-com textarea{
+    width: 100%;
+    height: 100px;
+}
+
+.start-submit-button {
+    display: flex;
+    margin: 10px;
+    justify-content: center;
+
+}
+
+.start-submit-button input{
+    width: 300px;
+    resize: vertical;
+    border-radius: 15px;
+    border: 0;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.06);
+    height: 40px;
+}
+
+.start-submit-button input:hover{
+    color: white;
+    background-color:black;
+}
+
+
+.footer {
+    background-color: black;
+    height: 100px;
+}
+
+

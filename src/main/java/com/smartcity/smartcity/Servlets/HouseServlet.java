@@ -41,7 +41,8 @@ public class HouseServlet extends HttpServlet {
                        resultSet.getInt("rating"),
                        resultSet.getString("address"),
                        resultSet.getInt("floors"),
-                       resultSet.getInt("flats")
+                       resultSet.getInt("flats"),
+                       resultSet.getInt("about_id")
                );
 
                houses.add(house);

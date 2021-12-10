@@ -8,16 +8,26 @@ public class ATM implements Model {
     private String bank;
     private String address;
     private int rating;
+    private int aboutId;
 
-    public ATM(int id, String name, String bank, String address, int rating) {
+    public ATM(int id, String name, String bank, String address, int rating, int aboutId) {
         this.id = id;
         this.name = name;
         this.bank = bank;
         this.address = address;
         this.rating = rating;
+        this.aboutId = aboutId;
     }
 
     public ATM() {
+    }
+
+    public int getAboutId() {
+        return aboutId;
+    }
+
+    public void setAboutId(int aboutId) {
+        this.aboutId = aboutId;
     }
 
     public int getId() {

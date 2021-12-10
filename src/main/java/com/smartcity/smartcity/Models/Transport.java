@@ -7,15 +7,26 @@ public class Transport implements Model {
     private String type;
     private int number;
     private String rootName;
+    private int aboutId;
 
-    public Transport(int id, String type, int number, String rootName) {
+
+    public Transport(int id, String type, int number, String rootName, int aboutId) {
         this.id = id;
         this.type = type;
         this.number = number;
         this.rootName = rootName;
+        this.aboutId = aboutId;
     }
 
     public Transport() {
+    }
+
+    public int getAboutId() {
+        return aboutId;
+    }
+
+    public void setAboutId(int aboutId) {
+        this.aboutId = aboutId;
     }
 
     public int getId() {

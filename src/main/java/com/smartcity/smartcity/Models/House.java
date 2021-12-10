@@ -8,17 +8,36 @@ public class House implements Model {
     private String address;
     private int floors;
     private int flats;
+    private int aboutId;
 
-    public House(int id, int rating, String address, int floors, int flats) {
+
+    public House(int id, int rating, String address, int floors, int flats, int aboutId) {
         this.id = id;
         this.rating = rating;
         this.address = address;
         this.floors = floors;
         this.flats = flats;
+        this.aboutId = aboutId;
+    }
+  public House(int rating, String address, int floors, int flats, int aboutId) {
+        this.rating = rating;
+        this.address = address;
+        this.floors = floors;
+        this.flats = flats;
+        this.aboutId = aboutId;
     }
 
     public House() {
     }
+
+    public int getAboutId() {
+        return aboutId;
+    }
+
+    public void setAboutId(int aboutId) {
+        this.aboutId = aboutId;
+    }
+
 
     public int getId() {
         return id;

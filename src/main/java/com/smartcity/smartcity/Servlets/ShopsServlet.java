@@ -38,8 +38,11 @@ public class ShopsServlet extends HttpServlet {
 
                 Shop shop = new Shop(
                         resultSet.getInt("id"),
+                        resultSet.getString("name"),
+                        resultSet.getString("type"),
                         resultSet.getString("address"),
-                        resultSet.getInt("rating")
+                        resultSet.getInt("rating"),
+                        resultSet.getInt("about_id")
                 );
 
                 shops.add(shop);

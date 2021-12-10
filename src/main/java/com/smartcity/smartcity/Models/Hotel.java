@@ -7,12 +7,22 @@ public class Hotel implements Model {
     private String name;
     private int rating;
     private String address;
+    private int aboutId;
 
-    public Hotel(int id, String name, int rating, String address) {
+    public Hotel(int id, String name, int rating, String address, int aboutId) {
         this.id = id;
         this.name = name;
         this.rating = rating;
         this.address = address;
+        this.aboutId = aboutId;
+    }
+
+    public int getAboutId() {
+        return aboutId;
+    }
+
+    public void setAboutId(int aboutId) {
+        this.aboutId = aboutId;
     }
 
     public Hotel() {

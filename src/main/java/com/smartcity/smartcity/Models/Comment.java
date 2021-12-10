@@ -6,16 +6,25 @@ public class Comment implements Model {
     private int id;
     private int userId;
     private String text;
-    private int TopicId;
+    private int aboutId;
 
-    public Comment(int id, int userId, String text, int topicId) {
+
+    public Comment(int id, int userId, String text, int aboutId) {
         this.id = id;
         this.userId = userId;
         this.text = text;
-        TopicId = topicId;
+        this.aboutId = aboutId;
     }
 
     public Comment() {
+    }
+
+    public int getAboutId() {
+        return aboutId;
+    }
+
+    public void setAboutId(int aboutId) {
+        this.aboutId = aboutId;
     }
 
     public int getId() {
@@ -42,11 +51,4 @@ public class Comment implements Model {
         this.text = text;
     }
 
-    public int getTopicId() {
-        return TopicId;
-    }
-
-    public void setTopicId(int topicId) {
-        TopicId = topicId;
-    }
 }
