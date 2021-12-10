@@ -19,7 +19,23 @@ public class Shop implements Model {
         this.aboutId = aboutId;
     }
 
+    public Shop(String name, String type, String address, int rating, int aboutId) {
+        this.name = name;
+        this.type = type;
+        this.address = address;
+        this.rating = rating;
+        this.aboutId = aboutId;
+    }
+
     public Shop() {
+    }
+
+    public int getAboutId() {
+        return aboutId;
+    }
+
+    public void setAboutId(int aboutId) {
+        this.aboutId = aboutId;
     }
 
     public String getName() {

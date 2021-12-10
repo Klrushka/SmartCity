@@ -19,6 +19,14 @@ public class ATM implements Model {
         this.aboutId = aboutId;
     }
 
+    public ATM(String name, String bank, String address, int rating, int aboutId) {
+        this.name = name;
+        this.bank = bank;
+        this.address = address;
+        this.rating = rating;
+        this.aboutId = aboutId;
+    }
+
     public ATM() {
     }
 

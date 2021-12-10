@@ -16,6 +16,12 @@ public class Comment implements Model {
         this.aboutId = aboutId;
     }
 
+    public Comment(int userId, String text, int aboutId) {
+        this.userId = userId;
+        this.text = text;
+        this.aboutId = aboutId;
+    }
+
     public Comment() {
     }
 

@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: User
-  Date: 08.12.2021
-  Time: 19:05
+  Date: 10.12.2021
+  Time: 19:07
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -17,7 +17,7 @@
 </head>
 
 <body>
-<form method="post">
+<form method="post" >
     <header class="header-menu">
         <ul>
             <li>SMART CITY</li>
@@ -43,7 +43,7 @@
     <main class="main">
         <div class="page-label">
             <p>
-                HOUSE
+                PARK
             </p>
 
         </div>
@@ -61,14 +61,6 @@
                     Rating
                 </a>
                 <input name="rating" type="number" max="5" step="1" required>
-                <a>
-                    Floors
-                </a>
-                <input name="floors" type="number" step="1" required>
-                <a>
-                    Flats
-                </a>
-                <input name="flats" type="number" step="1" required>
             </fieldset>
         </div>
 
@@ -95,3 +87,4 @@
 </form>
 </body>
 </html>
+

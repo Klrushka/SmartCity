@@ -3,8 +3,7 @@ package com.smartcity.smartcity.requests;
 import com.smartcity.smartcity.Models.*;
 import com.smartcity.smartcity.Models.interfaces.Model;
 import com.smartcity.smartcity.dbhandler.DBConnection;
-import com.smartcity.smartcity.requests.insert.AboutInsertRequest;
-import com.smartcity.smartcity.requests.insert.HouseInsertRequest;
+import com.smartcity.smartcity.requests.insert.*;
 import com.smartcity.smartcity.requests.interfaces.RequestExecutor;
 
 import java.sql.Connection;
@@ -56,19 +55,17 @@ public class RequestExecutorImp implements RequestExecutor {
         if (model instanceof House) {
             HouseInsertRequest.execute((House) model);
         } else if (model instanceof Hotel) {
-
+            HotelInsertRequest.execute((Hotel) model);
         } else if (model instanceof ATM) {
-
+            ATMInsertRequest.execute((ATM) model);
         } else if (model instanceof Park) {
-
+            ParkInsertRequest.execute((Park) model);
         } else if (model instanceof Shop) {
-
+            ShopInsertRequest.execute((Shop) model);
         } else if (model instanceof Transport) {
-
+            TransportInsertRequest.execute((Transport) model);
         } else if (model instanceof About){
             AboutInsertRequest.execute((About) model);
         }
     }
-
-
 }

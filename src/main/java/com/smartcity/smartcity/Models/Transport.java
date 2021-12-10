@@ -18,6 +18,13 @@ public class Transport implements Model {
         this.aboutId = aboutId;
     }
 
+    public Transport(String type, int number, String rootName, int aboutId) {
+        this.type = type;
+        this.number = number;
+        this.rootName = rootName;
+        this.aboutId = aboutId;
+    }
+
     public Transport() {
     }
 

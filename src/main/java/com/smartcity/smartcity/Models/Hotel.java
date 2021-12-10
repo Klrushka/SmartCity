@@ -17,6 +17,13 @@ public class Hotel implements Model {
         this.aboutId = aboutId;
     }
 
+    public Hotel(String name, int rating, String address, int aboutId) {
+        this.name = name;
+        this.rating = rating;
+        this.address = address;
+        this.aboutId = aboutId;
+    }
+
     public int getAboutId() {
         return aboutId;
     }

@@ -1,8 +1,8 @@
 <%--
   Created by IntelliJ IDEA.
   User: User
-  Date: 08.12.2021
-  Time: 19:05
+  Date: 10.12.2021
+  Time: 19:46
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -43,7 +43,7 @@
     <main class="main">
         <div class="page-label">
             <p>
-                HOUSE
+                TRANSPORT
             </p>
 
         </div>
@@ -54,21 +54,18 @@
                 <legend>ENTER DATA</legend>
 
                 <a>
-                    Address
+                    Type
                 </a>
-                <input name="address" type="text" required>
+                <input name="type" type="text" required>
                 <a>
-                    Rating
+                    Root name
                 </a>
-                <input name="rating" type="number" max="5" step="1" required>
+                <input name="root-name" type="text" required>
+
                 <a>
-                    Floors
+                    Number
                 </a>
-                <input name="floors" type="number" step="1" required>
-                <a>
-                    Flats
-                </a>
-                <input name="flats" type="number" step="1" required>
+                <input name="number" type="number" step="1" required>
             </fieldset>
         </div>
 

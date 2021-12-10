@@ -15,6 +15,13 @@ public class Park implements Model {
         this.aboutId = aboutId;
     }
 
+
+    public Park(String address, int rating, int aboutId) {
+        this.address = address;
+        this.rating = rating;
+        this.aboutId = aboutId;
+    }
+
     public Park() {
     }
 

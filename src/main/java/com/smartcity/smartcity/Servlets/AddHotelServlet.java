@@ -17,8 +17,8 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-@WebServlet(name = "AddHouseServlet", value = "/AddHouseServlet")
-public class AddHouseServlet extends HttpServlet {
+@WebServlet(name = "AddHotelServlet", value = "/AddHotelServlet")
+public class AddHotelServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
@@ -26,7 +26,7 @@ public class AddHouseServlet extends HttpServlet {
         User user = (User) session.getAttribute("user");
 
         if (user.getAccess().equals("admin")) {
-            getServletContext().getRequestDispatcher("/add-house.jsp").forward(request, response);
+            getServletContext().getRequestDispatcher("/add-hotel.jsp").forward(request, response);
         } else {
             // TODO ERROR PAGE
         }
@@ -59,7 +59,6 @@ public class AddHouseServlet extends HttpServlet {
                     Integer.parseInt(request.getParameter("rating")),
                     request.getParameter("address"),
                     about.getId()
-
             );
 
             executor.addData(hotel);

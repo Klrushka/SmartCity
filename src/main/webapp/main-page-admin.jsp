@@ -25,12 +25,12 @@
         <li><div class="dropdown">
             <button class="dropbtn">Add data</button>
             <div class="dropdown-content">
-                <a href="#">Atm</a>
-                <a href="#">Hotels</a>
+                <a href="AddATMServlet">Atm</a>
+                <a href="AddHotelServlet">Hotels</a>
                 <a href="AddHouseServlet">Houses</a>
-                <a href="#">Parks</a>
-                <a href="#">Shops</a>
-                <a href="#">Transport</a>
+                <a href="AddParkServlet">Parks</a>
+                <a href="AddShopServlet">Shops</a>
+                <a href="AddTransportServlet">Transport</a>
             </div>
         </div></li>
         <li><a href="#about">About</a></li>

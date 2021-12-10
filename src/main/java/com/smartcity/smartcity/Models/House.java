@@ -19,7 +19,8 @@ public class House implements Model {
         this.flats = flats;
         this.aboutId = aboutId;
     }
-  public House(int rating, String address, int floors, int flats, int aboutId) {
+
+    public House(int rating, String address, int floors, int flats, int aboutId) {
         this.rating = rating;
         this.address = address;
         this.floors = floors;
