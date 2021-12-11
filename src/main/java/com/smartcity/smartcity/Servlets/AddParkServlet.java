@@ -67,6 +67,6 @@ public class AddParkServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-
+        getServletContext().getRequestDispatcher("/add-park.jsp").forward(request, response);
     }
 }

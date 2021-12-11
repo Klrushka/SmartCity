@@ -5,6 +5,9 @@
   Time: 19:19
   To change this template use File | Settings | File Templates.
 --%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -26,78 +29,71 @@
     </ul>
 </header>
 
-
-<main class="main">
-
-    <div class="about-block">
+<form method="post">
 
 
-        <div class="about-img">
-            <img src="img/p1.jpg">
+    <main class="main">
+
+        <div class="about-block">
+
+
+            <div class="about-img">
+                <img src="img/p1.jpg">
+            </div>
+
+
+            <div class="about-text">
+                <h1>
+                    ABOUT
+                </h1>
+
+
+                <p>
+                    ${about.text}
+                </p>
+            </div>
+
+
         </div>
 
 
-        <div class="about-text">
-            <h1>
-                ABOUT
-            </h1>
+        <div class="comments">
+            <c:forEach var="comment" items="${comments}">
+
+                <p>
+                        ${comment.userName} (${comment.userId})
+                </p>
+                <div class="comment">
+
+                    <p>
+                            ${comment.text}
+                    </p>
+
+                </div>
+                <p>
+                    <fmt:formatDate type="both" dateStyle="short" timeStyle="short" value="${comment.time}"/>
+
+                </p>
+            </c:forEach>
 
 
+            <div class="com-t">
+                Your Comment:
+            </div>
 
-            <p>
-                ${about.text}
-            </p>
-        </div>
-
-
-
-    </div>
-
-
-    <div class="comments">
-
-        <p>
-            User(1)
-        </p>
-        <div class="comment">
-
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sodales ante vitae dolor suscipit, nec
-                tempor massa scelerisque. Curabitur eget arcu eu nibh dignissim porttitor ac eget libero.
-                Sed ultrices tortor non gravida gravida. Suspendisse potenti. Vestibulum euismod odio nec ex posuere,
-                non varius enim posuere. Nullam iaculis consequat tellus egestas convallis. Donec ut pulvinar dui, non
-                fringilla nulla.
-                Proin tempus orci velit, eget maximus ligula condimentum eu. Duis scelerisque tincidunt gravida. Nunc
-                posuere neque et imperdiet ultricies. Morbi sem nulla, sodales vel congue ac, convallis ut libero.
-                Mauris blandit libero sed sagittis interdum.
-                Mauris lacus est, rutrum non arcu quis, luctus commodo lacus.
-                Aliquam dictum mauris quis purus lacinia, in mollis dui eleifend. Integer ac blandit arcu.
-            </p>
+            <div class="input-com">
+                <textarea name="com"></textarea>
+            </div>
 
         </div>
-        <p>
-            time
-        </p>
 
-
-
-        <div class="com-t">
-            Your Comment:
+        <div class="start-submit-button">
+            <input type="submit" value="Comment">
+            <br>
         </div>
 
-        <div class="input-com">
-            <textarea name="com"></textarea>
-        </div>
-
-    </div>
-
-    <div class="start-submit-button">
-        <input type="submit" value="Comment">
-        <br>
-    </div>
-
-</main>
-
+    </main>
+</form>
 <footer class="footer">
 
 </footer>

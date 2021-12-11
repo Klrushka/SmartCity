@@ -14,7 +14,9 @@ import javax.servlet.annotation.*;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 
 @WebServlet(name = "AboutServlet", value = "/AboutServlet")
 public class AboutServlet extends HttpServlet {
@@ -53,16 +55,21 @@ public class AboutServlet extends HttpServlet {
                     comSelect.getRequest(request.getParameter("topicId")));
 
 
-            while (resultSet.next()) {
-                Comment comment = new Comment(
-                        resultSet.getInt("id"),
-                        resultSet.getInt("user_id"),
-                        resultSet.getString("text"),
-                        resultSet.getInt("topic_id")
-                );
+
+            if (resultSet != null) {
+                while (resultSet.next()) {
+                    Comment comment = new Comment(
+                            resultSet.getInt("id"),
+                            resultSet.getInt("user_id"),
+                            resultSet.getString("text"),
+                            resultSet.getInt("topic_id"),
+                            resultSet.getString("user_name"),
+                            resultSet.getTimestamp("time")
+                    );
 
 
-                comments.add(comment);
+                    comments.add(comment);
+                }
             }
         } catch (SQLException exception) {
             exception.printStackTrace();
@@ -85,5 +92,16 @@ public class AboutServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
+        HttpSession session = request.getSession();
+
+        User user = (User) session.getAttribute("user");
+
+        Comment comment = new Comment(
+                user.getId(),
+                request.getParameter("com"),
+                Integer.parseInt(request.getParameter("topicId")),
+                user.getName(),
+                Timestamp.valueOf(new Date().toString())
+        );
     }
 }

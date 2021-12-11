@@ -22,7 +22,7 @@
 
 <header class="header-menu">
     <ul>
-        <li>SMART CITY</li>
+        <li><a href="MainServlet">SMART CITY</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#">Creator</a></li>
         <li><a href="#">Account</a></li>
@@ -59,7 +59,7 @@
             <table cellpadding="0" cellspacing="0" border="0">
                 <tbody>
                 <c:forEach var="house" items="${houses}">
-                    <tr onclick="document.location = 'http://localhost:8080/SmartCity_war_exploded/AboutServlet?topicId=${house.id}'">
+                    <tr onclick="document.location = 'http://localhost:8080/SmartCity_war_exploded/AboutServlet?topicId=${house.aboutId}'">
                         <td><a>${house.address}</a></td>
                         <td><a>${house.flats}</a></td>
                         <td><a>${house.floors}/5</a></td>

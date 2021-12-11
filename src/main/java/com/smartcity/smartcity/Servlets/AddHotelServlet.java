@@ -69,6 +69,7 @@ public class AddHotelServlet extends HttpServlet {
         }
 
 
+        getServletContext().getRequestDispatcher("/add-hotel.jsp").forward(request, response);
     }
 
 }

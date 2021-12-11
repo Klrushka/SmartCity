@@ -54,21 +54,23 @@ public class AddHouseServlet extends HttpServlet {
 
             AboutInsertRequest.execute(about);
 
-            Hotel hotel = new Hotel(
-                    request.getParameter("name"),
+
+            House house = new House(
                     Integer.parseInt(request.getParameter("rating")),
                     request.getParameter("address"),
+                    Integer.parseInt(request.getParameter("floors")),
+                    Integer.parseInt(request.getParameter("flats")),
                     about.getId()
-
             );
 
-            executor.addData(hotel);
+            executor.addData(house);
 
 
         } catch (SQLException e) {
             e.printStackTrace();
         }
 
+        getServletContext().getRequestDispatcher("/add-house.jsp").forward(request, response);
 
     }
 

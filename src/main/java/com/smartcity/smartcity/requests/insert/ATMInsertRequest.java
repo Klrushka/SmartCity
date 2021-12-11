@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
 public class ATMInsertRequest {
-    private static final String REQUEST = "INSERT smartcity.atm (name, bank, address, about_id) VALUES (?,?,?,?)";
+    private static final String REQUEST = "INSERT smartcity.atm (name, bank, address, about_id, raiting) VALUES (?,?,?,?,?)";
 
     public static void execute (ATM atm){
 
@@ -23,6 +23,7 @@ public class ATMInsertRequest {
             statement.setString(2,atm.getBank());
             statement.setString(3,atm.getAddress());
             statement.setInt(4,atm.getAboutId());
+            statement.setInt(5,atm.getRating());
 
             statement.execute();
 

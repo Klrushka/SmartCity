@@ -20,7 +20,7 @@
 <form method="post">
     <header class="header-menu">
         <ul>
-            <li>SMART CITY</li>
+            <li><a href="MainServlet">SMART CITY</a></li>
             <li><a>Users</a></li>
             <li><div class="dropdown">
                 <button class="dropbtn">Add data</button>

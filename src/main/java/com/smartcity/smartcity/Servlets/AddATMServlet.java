@@ -68,7 +68,9 @@ public class AddATMServlet extends HttpServlet {
             e.printStackTrace();
         }
 
-
+        getServletContext().getRequestDispatcher("/add-atm.jsp").forward(request, response);
     }
+
+
 
 }

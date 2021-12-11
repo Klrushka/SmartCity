@@ -67,6 +67,8 @@ public class AddTransportServlet extends HttpServlet {
             e.printStackTrace();
         }
 
+        getServletContext().getRequestDispatcher("/add-transport.jsp").forward(request, response);
+
 
     }
 }

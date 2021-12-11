@@ -69,6 +69,8 @@ public class AddShopServlet extends HttpServlet {
             e.printStackTrace();
         }
 
+        getServletContext().getRequestDispatcher("/add-shop.jsp").forward(request, response);
+
 
     }
 }

@@ -66,6 +66,8 @@ public class RequestExecutorImp implements RequestExecutor {
             TransportInsertRequest.execute((Transport) model);
         } else if (model instanceof About){
             AboutInsertRequest.execute((About) model);
+        } else if (model instanceof Comment){
+            CommentInsertRequest.execute((Comment) model);
         }
     }
 }
