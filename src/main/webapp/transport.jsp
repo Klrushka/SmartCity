@@ -46,7 +46,7 @@
         <div class="tbl-header">
             <table cellpadding="0" cellspacing="0" border="0">
                 <thead>
-                <tr>
+                <tr >
                     <th>Number</th>
                     <th>Type</th>
                     <th>Root Name</th>
@@ -58,7 +58,7 @@
             <table cellpadding="0" cellspacing="0" border="0">
                 <tbody>
                 <c:forEach var="transport" items="${transports}">
-                    <tr>
+                    <tr onclick="document.location = 'http://localhost:8080/SmartCity_war_exploded/AboutServlet?topicId=${transport.aboutId}'">
                         <td><a>${transport.number}</a></td>
                         <td><a>${transport.type}</a></td>
                         <td><a>${transport.rootName}</a></td>

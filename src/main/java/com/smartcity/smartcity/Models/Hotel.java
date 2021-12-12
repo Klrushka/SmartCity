@@ -24,14 +24,6 @@ public class Hotel implements Model {
         this.aboutId = aboutId;
     }
 
-    public int getAboutId() {
-        return aboutId;
-    }
-
-    public void setAboutId(int aboutId) {
-        this.aboutId = aboutId;
-    }
-
     public Hotel() {
     }
 
@@ -65,5 +57,13 @@ public class Hotel implements Model {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public int getAboutId() {
+        return aboutId;
+    }
+
+    public void setAboutId(int aboutId) {
+        this.aboutId = aboutId;
     }
 }

@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -62,7 +63,7 @@ public class AboutServlet extends HttpServlet {
                             resultSet.getInt("id"),
                             resultSet.getInt("user_id"),
                             resultSet.getString("text"),
-                            resultSet.getInt("topic_id"),
+                            resultSet.getInt("about_id"),
                             resultSet.getString("user_name"),
                             resultSet.getTimestamp("time")
                     );
@@ -101,7 +102,17 @@ public class AboutServlet extends HttpServlet {
                 request.getParameter("com"),
                 Integer.parseInt(request.getParameter("topicId")),
                 user.getName(),
-                Timestamp.valueOf(new Date().toString())
+                Timestamp.valueOf(LocalDateTime.now())
         );
+
+
+        RequestExecutor executor = new RequestExecutorImp();
+
+        executor.addData(comment);
+
+
+        response.sendRedirect(request.getRequestURI() + "?" + request.getQueryString());
     }
+
+
 }

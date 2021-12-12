@@ -58,11 +58,11 @@
             <table cellpadding="0" cellspacing="0" border="0">
                 <tbody>
                 <c:forEach var="hotel" items="${hotels}">
-                <tr>
-                    <td><a>${hotel.name}</a></td>
-                    <td><a>${hotel.address}</a></td>
-                    <td><a>${hotel.rating}/5</a></td>
-                </tr>
+                    <tr onclick="document.location = 'http://localhost:8080/SmartCity_war_exploded/AboutServlet?topicId=${hotel.aboutId}'">
+                        <td><a>${hotel.name}</a></td>
+                        <td><a>${hotel.address}</a></td>
+                        <td><a>${hotel.rating}/5</a></td>
+                    </tr>
                 </c:forEach>
                 </tbody>
             </table>

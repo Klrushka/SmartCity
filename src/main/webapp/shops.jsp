@@ -59,7 +59,7 @@
             <table cellpadding="0" cellspacing="0" border="0">
                 <tbody>
                 <c:forEach var="shop" items="${shops}">
-                    <tr>
+                    <tr onclick="document.location = 'http://localhost:8080/SmartCity_war_exploded/AboutServlet?topicId=${shop.aboutId}'">
                         <td><a>${shop.name}</a></td>
                         <td><a>${shop.type}</a></td>
                         <td><a>${shop.address}</a></td>

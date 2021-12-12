@@ -15,7 +15,7 @@ public class CommentSelectRequest implements SelectRequest {
         StringBuffer buffer = new StringBuffer();
 
         buffer
-                .append("SELECT * FROM comments WHERE topic_id = ")
+                .append("SELECT * FROM comments WHERE about_id = ")
                 .append(params[0]);
 
 

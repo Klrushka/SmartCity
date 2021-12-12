@@ -57,7 +57,7 @@
             <table cellpadding="0" cellspacing="0" border="0">
                 <tbody>
                 <c:forEach var="park" items="${parks}">
-                    <tr>
+                    <tr onclick="document.location = 'http://localhost:8080/SmartCity_war_exploded/AboutServlet?topicId=${park.aboutId}'">
                         <td><a>${park.address}</a></td>
                         <td><a>${park.rating}/5</a></td>
                     </tr>

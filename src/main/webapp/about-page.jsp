@@ -22,14 +22,14 @@
 
 <header class="header-menu">
     <ul>
-        <li>SMART CITY</li>
+        <li><a href="MainServlet">SMART CITY</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#">Creator</a></li>
         <li><a href="#">Account</a></li>
     </ul>
 </header>
 
-<form method="post">
+<form method="post" >
 
 
     <main class="main">

@@ -196,7 +196,9 @@ body {
 
 
 
-
+.menu-block a{
+    color: azure;
+}
 
 
 .columns {

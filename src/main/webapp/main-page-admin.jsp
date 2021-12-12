@@ -21,7 +21,7 @@
 <header class="header-menu">
     <ul>
         <li>SMART CITY</li>
-        <li><a>Users</a></li>
+        <li><a href="UserServlet">Users</a></li>
         <li><div class="dropdown">
             <button class="dropbtn">Add data</button>
             <div class="dropdown-content">
@@ -35,7 +35,7 @@
         </div></li>
         <li><a href="#about">About</a></li>
         <li><a href="#">Creator</a></li>
-        <li><a href="#">Account</a></li>
+        <li><a href="AccountServlet">Account</a></li>
     </ul>
 </header>
 

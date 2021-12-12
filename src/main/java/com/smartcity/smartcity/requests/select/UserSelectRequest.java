@@ -2,6 +2,8 @@ package com.smartcity.smartcity.requests.select;
 
 import com.smartcity.smartcity.requests.interfaces.SelectRequest;
 
+import java.sql.Connection;
+
 public class UserSelectRequest implements SelectRequest {
 
 
@@ -27,5 +29,18 @@ public class UserSelectRequest implements SelectRequest {
         return buffer.toString();
 
 
+    }
+
+
+    public static String getUserById(String... params){
+
+        StringBuffer buffer = new StringBuffer();
+
+        buffer
+                .append("SELECT * FROM users WHERE id = ")
+                .append(params[0]);
+
+
+        return buffer.toString();
     }
 }
