@@ -60,7 +60,7 @@
             <table cellpadding="0" cellspacing="0" border="0">
                 <tbody>
                 <c:forEach var="user" items="${users}">
-                    <tr>
+                    <tr onclick="document.location = 'http://localhost:8080/SmartCity_war_exploded/AccountServlet?userId=${user.id}'">
                         <td><a>${user.name}</a></td>
                         <td><a>${user.phone}</a></td>
                         <td><a>${user.mail}</a></td>

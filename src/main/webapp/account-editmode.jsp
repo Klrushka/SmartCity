@@ -54,7 +54,7 @@
                         <a>
                             Name
                         </a>
-                        <input name="birthday" value="${user1.name}" type="text" required>
+                        <input name="name" value="${user1.name}" type="text" required>
                     </label>
                     <label>
                         <a>
@@ -78,7 +78,7 @@
                         <a>
                             Status
                         </a>
-                        <input name="status" value="${user1.status}" readonly>
+                        <input name="status" value="${user1.status}" required readonly>
                     </label>
                     <label>
                         <a>
@@ -86,7 +86,6 @@
                         </a>
                         <input name="mail" value="${user1.mail}" type="email" required>
                     </label>
-
                     <label>
                         <a>
                             Access

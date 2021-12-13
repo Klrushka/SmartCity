@@ -58,7 +58,7 @@ public class LoginServlet extends HttpServlet {
         }
 
 
-        if (user == null) {
+        if (user == null || user.getStatus().equals("ban") || user.getStatus().equals("waiting")){
             //TODO "ERROR PAGE"
         } else if (user.getAccess().equals("admin")) {
             session.setAttribute("user",user);
