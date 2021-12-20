@@ -42,7 +42,7 @@ public class RegistrationPageServlet extends HttpServlet {
 
         session.setAttribute("user", user);
 
-        response.sendRedirect("MainServlet");
+        response.sendRedirect("login");
 
     }
 }

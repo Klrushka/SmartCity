@@ -24,6 +24,8 @@
         <li><a href="#about">About</a></li>
         <li><a href="#">Creator</a></li>
         <li><a href="AccountServlet">Account</a></li>
+        <li><a href="login">Exit</a></li>
+
     </ul>
 </header>
 

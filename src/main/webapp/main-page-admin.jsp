@@ -36,6 +36,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#">Creator</a></li>
         <li><a href="AccountServlet">Account</a></li>
+        <li><a href="login">Exit</a></li>
     </ul>
 </header>
 
@@ -111,7 +112,7 @@
         <p>Hotels</p>
         <div class="block hotel">
             <p>
-                <a href="hotels">Looking for some sleep? Click here!</a>
+                <a href="HotelsServlet">Looking for some sleep? Click here!</a>
             </p>
 
         </div>
